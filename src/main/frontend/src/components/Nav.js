@@ -6,7 +6,7 @@ import "../styles/common/Nav.css";
 const Nav = () => {
   return (
     <div>
-      <nav class="nav1">
+      <nav className="nav1">
         <div>
           <NavLink to="/">Home</NavLink>
         </div>
@@ -19,8 +19,11 @@ const Nav = () => {
         <div>
           <NavLink to="/mypage">Login</NavLink>
         </div>
+        <div>
+          <NavLink to="/signup">SignUp</NavLink>
+        </div>
       </nav>
-      <nav class="nav2">
+      <nav className="nav2">
         <Dropdown text="menu1">
           <Dropdown.Menu>
             <Dropdown.Item>
@@ -43,7 +46,7 @@ const Nav = () => {
           <NavLink to="/mypage">menu4</NavLink>
         </div>
         <div>
-          <NavLink to="/mypage">menu5</NavLink>
+          <NavLink to="/singup">menu5</NavLink>
         </div>
       </nav>
     </div>

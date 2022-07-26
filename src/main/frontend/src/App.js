@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Recommend from "./pages/Recommend";
 import Search from "./pages/Search";
 import MyPage from "./pages/MyPage";
+import SignUp from "./pages/SignUp";
 import Nav from "./components/Nav";
 import SliderPost from "./components/SliderPost";
 import "./styles/common/App.css";
@@ -26,38 +27,23 @@ import "./styles/common/App.css";
 //        </div>
 //    );
 //}
-//
-//export default App;
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      headerMessage: "Header",
-      footerMessage: "Footer",
-    };
-  }
-
   render() {
     return (
       <div className="App">
-        <Routes>
-          <Route exact path="/" component={Home} />
-          <Route path="/recommend" component={Recommend} />
-          <Route path="/search" component={Search} />
-          <Route path="/mypage" component={MyPage} />
-        </Routes>
         <Nav />
         <SliderPost />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/recommend" element={<Recommend />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
       </div>
     );
   }
 }
-
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href =
-  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
 
 export default App;
