@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 import java.time.LocalDateTime;
 
 public class User {
@@ -15,6 +12,7 @@ public class User {
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
+    private Authority authority;
 
     public Long getId() {
         return id;
@@ -48,3 +46,4 @@ public class User {
         return updatedBy;
     }
 }
+

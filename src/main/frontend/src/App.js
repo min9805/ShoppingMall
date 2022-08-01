@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Recommend from "./pages/Recommend";
+import Product from "./pages/Product";
 import Search from "./pages/Search";
 import MyPage from "./pages/MyPage";
 import SignUp from "./pages/SignUp";
+import Menu from "./pages/Menu";
+
 import Nav from "./components/Nav";
 import SliderPost from "./components/SliderPost";
 import "./styles/common/App.css";
@@ -36,7 +38,8 @@ class App extends Component {
         <SliderPost />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/recommend" element={<Recommend />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/menu" element={<Menu />} />
           <Route path="/search" element={<Search />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/signup" element={<SignUp />} />

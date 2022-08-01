@@ -32,7 +32,6 @@ public class UserController {
     @PostMapping("member/signUp")
     public UserEntity signUp(@RequestBody User user) {
         final UserEntity member = UserEntity.builder()
-                .id(user.getId())
                 .account(user.getAccount())
                 .email(user.getEmail())
                 .phoneNumber(user.getPhoneNumber())

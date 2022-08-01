@@ -10,11 +10,21 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Builder
-public class PostEntity {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // mysql의 AUTO_INCREMENT를 그대로 사용
-    private Long post_id;
+    private Long id;
+
+    @Column(nullable = false)
+    private String prodName;
+
+    private String imgName;
+    private String imgPath;
+    private String content;
+
+    @Column(nullable = false)
+    private Long price;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
@@ -22,9 +32,6 @@ public class PostEntity {
     @Column(nullable = false)
     private String createdBy;
 
-    private LocalDateTime updatedAt;
-
-    private String updatedBy;
 }
 
 

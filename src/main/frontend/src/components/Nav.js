@@ -14,7 +14,7 @@ const Nav = () => {
           <NavLink to="/search">Search</NavLink>
         </div>
         <div>
-          <NavLink to="/mypage">MyPage</NavLink>
+          <NavLink to="/product">Product</NavLink>
         </div>
         <div>
           <NavLink to="/mypage">Login</NavLink>
@@ -34,7 +34,7 @@ const Nav = () => {
           </Dropdown.Menu>
         </Dropdown>
         <div>
-          <NavLink to="/">menu1</NavLink>
+          <NavLink to="/menu">menu1</NavLink>
         </div>
         <div>
           <NavLink to="/recommend">menu2</NavLink>

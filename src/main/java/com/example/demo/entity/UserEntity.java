@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.Authority;
 import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,6 +16,9 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // mysql의 AUTO_INCREMENT를 그대로 사용
     private Long id;
+
+    @Enumerated(EnumType.STRING)
+    private Authority authority;
 
     @Column(nullable = false)
     private String account;

@@ -3,7 +3,6 @@ import axios from "axios";
 
 function SignUp() {
   // 요청받은 정보를 담아줄 변수 선언
-  const [id, setId] = useState(0);
   const [account, setAccount] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -14,41 +13,21 @@ function SignUp() {
       url: "/v1/member/signUp",
       method: "POST",
       data: {
-        id: id,
         account: account,
         email: email,
         phoneNumber: phoneNumber,
       },
       baseURL: "http://localhost:8080",
-    }).then((res) => {
-      callback(res.data);
     });
     alert(`회원가입완료`);
     window.location.href = "/";
   };
-
-  // 변수 초기화
-  function callback(str) {
-    setId(str);
-  }
 
   return (
     <form action="" onSubmit={handleSubmit}>
       <div className="container">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
-
-        <label htmlFor="id(Long)">
-          <b>ID_Number(LONG)</b>
-        </label>
-        <input
-          type="number"
-          placeholder="Enter ID Number"
-          name="id"
-          required
-          value={id}
-          onChange={({ target: { value } }) => setId(value)}
-        />
 
         <br />
 
