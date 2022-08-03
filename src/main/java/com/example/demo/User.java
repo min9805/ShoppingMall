@@ -4,9 +4,12 @@ package com.example.demo;
 import java.time.LocalDateTime;
 
 public class User {
+
+
     private Long id;
     private String account;
     private String email;
+    private String password;
     private String phoneNumber;
     private LocalDateTime createdAt;
     private String createdBy;
@@ -24,6 +27,14 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Authority getAuthority() {
+        return authority;
     }
 
     public String getPhoneNumber() {
