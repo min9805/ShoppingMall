@@ -1,5 +1,5 @@
 # ShoppingMall
 
-##Spring
-##React.js
-##MySQL
+## Spring
+## React.js
+## MySQL
